@@ -2,9 +2,9 @@ package com.coding.dsa.jan2026.IntroToArrays;
 
 import java.util.Scanner;
 /*
-Given N array elements, Rotate array from last to first by k times SC: O(1)
+Rotate the array k times from left to right.
  */
-public class Day1P5 {
+public class Day2P6 {
     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of array");
@@ -17,7 +17,7 @@ public class Day1P5 {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i]+" ");
         }
-        System.out.println("Enter the value to rotate the arr by right to left times");
+        System.out.println("Enter the value to rotate the arr by left to right times");
         int k = sc.nextInt();
         int start =0;
         int end =n-1;
@@ -26,8 +26,8 @@ public class Day1P5 {
         }
 
         swapInIndexes(arr, start,end);
-        swapInIndexes(arr,0,k-1);
-        swapInIndexes(arr,k,end);
+        swapInIndexes(arr,0,end-k);
+        swapInIndexes(arr,end-k+1,end);
 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i]+" ");
