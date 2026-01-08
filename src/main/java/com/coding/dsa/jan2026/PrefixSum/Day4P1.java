@@ -40,9 +40,9 @@ public class Day4P1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
+        long[] arr = new long[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = sc.nextLong();
         }
         int p = sc.nextInt();
         int q= sc.nextInt();
@@ -59,7 +59,7 @@ public class Day4P1 {
         }
     }
 
-    public static long[] rangeSum(int[] A, int[][] B) {
+    public static long[] rangeSum(long[] A, int[][] B) {
         int n = A.length;
         long[] ans  = new long[B.length];
 
