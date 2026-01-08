@@ -54,8 +54,8 @@ public class Day4P1 {
             System.out.println();
         }
         long[] ans = rangeSum(arr,B);
-        for(long i : ans){
-            System.out.println(i);
+        for(long z : ans){
+            System.out.println(z);
         }
     }
 
