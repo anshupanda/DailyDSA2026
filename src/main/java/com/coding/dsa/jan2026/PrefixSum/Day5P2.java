@@ -45,6 +45,11 @@ public class Day5P2 {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextLong();
         }
+        System.out.println(getEqIndex(arr));
+    }
+
+    private static long getEqIndex(long[] arr) {
+        int n = arr.length;
         // prefix sum
         for(int i=1;i<n;i++){
             arr[i] = arr[i-1] + arr[i];
@@ -61,10 +66,9 @@ public class Day5P2 {
             }
             right = arr[n-1]-arr[i];
             if (left == right){
-                System.out.println(i);
-                break;
+               return i;
             }
         }
-
+        return -1;
     }
 }
